@@ -1,0 +1,39 @@
+
+// 所有的颜色都在这里设置
+$themes:(light:(bgColor:#fff,
+    textColor:#000,
+    danger:#d92020),
+  dark:(bgColor:#000,
+    textColor:#fff, danger:#d92020),
+);
+
+$curTheme: light; //当前的主题 默认是light
+
+
+@mixin useTheme() {
+
+  // 循环$themes
+  @each $key,
+  $value in $themes {
+    $curTheme: $key !global; //重新设置当前的主题  设置global代表全局样式
+    // // &表示使用当前的选择器, 哪里用到了useTheme 就代表选中了他自己
+
+    html[data-theme='#{$key}'] & {
+
+      @content;
+    }
+  }
+
+  // html[data-theme='light'] & {}
+  // html[data-theme='dark'] & {}
+}
+
+;
+
+@function getVar($key) {
+  $themeMap: map-get($themes, $curTheme); //选中$themes中下的所有颜色
+  @return map-get($themeMap, $key);
+}
+
+;
+

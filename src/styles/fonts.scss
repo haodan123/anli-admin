@@ -1,0 +1,53 @@
+
+@font-face {
+  font-family: 'ceshi';  /* Project id 4111799 */
+  src: url('//at.alicdn.com/t/c/font_4111799_chev1bdwot.woff2?t=1687921107934') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4111799_chev1bdwot.woff?t=1687921107934') format('woff'),
+       url('//at.alicdn.com/t/c/font_4111799_chev1bdwot.ttf?t=1687921107934') format('truetype');
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  font-family: "ceshi" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zhankai3:before {
+  content: "\e6bb";
+}
+
+.icon-camera:before {
+  content: "\e7d7";
+}
+
+.icon-home:before {
+  content: "\e69b";
+}
+
+.icon-chat_bubble:before {
+  content: "\e8e1";
+}
+
+.icon-Profile:before {
+  content: "\e642";
+}
+
+.icon-settings:before {
+  content: "\e840";
+}
+
+.icon-hangzhengguanli:before {
+  content: "\e663";
+}
+
+.icon-guihuaguanli:before {
+  content: "\e664";
+}
+
+.icon-hetongguanli:before {
+  content: "\e665";
+}
+
