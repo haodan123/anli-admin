@@ -125,6 +125,13 @@ export default [
         meta: { title: "密码随机生成" },
       },
       {
+        path: "/qrCodeGenerator",
+        icon:'fa-solid fa-qrcode',
+        component: () => import("@/views/Learnjs/qrCodeGenerator/index.vue"),
+        name: "生成二维码",
+        meta: { title: "生成二维码" },
+      },
+      {
         path: "/select",
         component: () => import("@/views/Learnjs/select/index.vue"),
         name: "select",
