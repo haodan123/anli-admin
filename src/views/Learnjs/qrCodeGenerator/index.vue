@@ -141,6 +141,7 @@
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         const img = document.querySelector("#qr-code img");
+        // console.log(img.src);
         if (img.currentSrc) {
           resolve(img.currentSrc);
           return;
@@ -167,6 +168,7 @@
 
   .qrcodeBox {
     // background-color: #1c1e26;
+    margin-top: 20px;
     width: 100%;
     max-width: 500px;
     min-height: 500px;

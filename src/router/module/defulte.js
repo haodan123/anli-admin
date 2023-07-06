@@ -132,6 +132,15 @@ export default [
         meta: { title: "生成二维码" },
       },
       {
+        path: "/deviceBattery",
+
+        icon:'fa-solid fa-battery-half',
+        component: () => import("@/views/Learnjs/deviceBattery/index.vue"),
+        name: "设备电池",
+        meta: { title: "设备电池" },
+      },
+      
+      {
         path: "/select",
         component: () => import("@/views/Learnjs/select/index.vue"),
         name: "select",
