@@ -133,13 +133,18 @@ export default [
       },
       {
         path: "/deviceBattery",
-
         icon:'fa-solid fa-battery-half',
         component: () => import("@/views/Learnjs/deviceBattery/index.vue"),
         name: "设备电池",
         meta: { title: "设备电池" },
       },
-      
+      {
+        path: "/XOgame",
+        icon:'fa-solid fa-o',
+        component: () => import("@/views/Learnjs/XOgame/index.vue"),
+        name: "井字棋",
+        meta: { title: "井字棋" },
+      },
       {
         path: "/select",
         component: () => import("@/views/Learnjs/select/index.vue"),

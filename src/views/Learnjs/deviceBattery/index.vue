@@ -1,5 +1,5 @@
 <template>
-  <div class="pageView">
+  <div class="deviceView">
     <!-- 电池卡片 -->
     <div class="Bcard">
       <!-- 电池条 -->
@@ -93,7 +93,7 @@
 </script>
 
 <style scoped lang="scss">
-  .pageView {
+  .deviceView {
     display: flex;
     justify-content: center;
     align-items: center;
