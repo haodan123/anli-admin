@@ -33,23 +33,23 @@
               <label for="lowercase">小写字母 (a-z)</label>
             </li>
             <li class="option">
-              <input type="checkbox" id="uppercase">
+              <input type="checkbox" id="uppercase" @change="changeCheck($event,'uppercase')">
               <label for="uppercase">大写最 (A-Z)</label>
             </li>
             <li class="option">
-              <input type="checkbox" id="numbers">
+              <input type="checkbox" id="numbers" @change="changeCheck($event,'numbers')">
               <label for="numbers">数组 (0-9)</label>
             </li>
             <li class="option">
-              <input type="checkbox" id="symbols">
+              <input type="checkbox" id="symbols" @change="changeCheck($event,'symbols')">
               <label for="symbols">符号 (!-$^+)</label>
             </li>
             <li class="option">
-              <input type="checkbox" id="exc-duplicate">
+              <input type="checkbox" id="exc-duplicate" @change="changeCheck($event,'exc-duplicate')">
               <label for="exc-duplicate">排除重复的</label>
             </li>
             <li class="option">
-              <input type="checkbox" id="spaces">
+              <input type="checkbox" id="spaces" @change="changeCheck($event,'spaces')">
               <label for="spaces">包括空格</label>
             </li>
           </ul>
@@ -88,19 +88,53 @@
   const changeLength = (e) => {
     generatePassword()
   }
+  //选中的数据
+  const optionsArr = [{
+      checked: true,
+      id: 'lowercase'
+    },
+    {
+      checked: false,
+      id: 'uppercase'
+    },
+    {
+      checked: false,
+      id: 'numbers'
+    },
+    {
+      checked: false,
+      id: 'symbols'
+    },
+    {
+      checked: false,
+      id: 'exc-duplicate'
+    },
+    {
+      checked: false,
+      id: 'spaces'
+    }
+  ]
 
-
+  const changeCheck = (e, value) => {
+    console.log(e.target.checked, value);
+    optionsArr.forEach(item => {
+      if (item.id === value) {
+        item.checked = e.target.checked
+      }
+    })
+    console.log(optionsArr);
+  }
 
   // 生成密码
   const generatePassword = () => {
     // 获取所有选项的dom
-    const options = document.querySelectorAll(".option input");
     let staticPassword = "", //静态密码
       randomPassword = "", //最终的密码
       excludeDuplicate = false, //不重复
       passLength1 = passLength.value;
-
-    options.forEach(item => {
+    // const options = document.querySelectorAll(".option input");
+    // 如果是js   就把options的注释解除 把optionsArr换成上面的options
+    optionsArr.forEach(item => {
 
       if (item.checked) {
         if (item.id !== "exc-duplicate" && item.id !== "spaces") { //不排除重复的 不包括空格
@@ -271,7 +305,8 @@
 
       .option:first-child {
         pointer-events: none;
-        input{
+
+        input {
           opacity: 0.7;
         }
       }

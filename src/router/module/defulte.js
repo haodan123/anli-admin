@@ -146,6 +146,13 @@ export default [
         meta: { title: "井字棋" },
       },
       {
+        path: "/XOgame2",
+        icon:'fa-solid fa-o',
+        component: () => import("@/views/Learnjs/XOgame/index2.vue"),
+        name: "井字棋2",
+        meta: { title: "井字棋2" },
+      },
+      {
         path: "/select",
         component: () => import("@/views/Learnjs/select/index.vue"),
         name: "select",
