@@ -1,8 +1,6 @@
 <template>
 
-  <div class="content-body "  data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
+  <div class="content-body " data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
     <div class="slide-container" ref="container" :style="{transform: `translateX(${offset}px)`}">
 
       <div class="wrapper" v-for="(item, index) in cardList" :key="index">
@@ -226,11 +224,13 @@
 
 
   .clash-card {
+    
+
     background: white;
     width: 300px;
     display: inline-block;
     margin: auto;
-    border-radius: $border-radius-size + 5;
+    border-radius: $border-radius-size+5;
     position: relative;
     text-align: center;
     box-shadow: -1px 15px 30px -12px black;

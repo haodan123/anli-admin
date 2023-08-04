@@ -814,9 +814,6 @@ chalk@^4.0.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
-"ckeditor5-custom-build@file:./ckeditor5":
-  version "0.0.1"
-
 ckeditor5@38.1.0:
   version "38.1.0"
   resolved "https://registry.npmmirror.com/ckeditor5/-/ckeditor5-38.1.0.tgz#6862a7bf5e67d2766e95f22926b7e4b1206ba830"
@@ -1218,6 +1215,11 @@ graphemer@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmmirror.com/graphemer/-/graphemer-1.4.0.tgz"
   integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
+
+gsap@^3.12.2:
+  version "3.12.2"
+  resolved "https://registry.npmmirror.com/gsap/-/gsap-3.12.2.tgz#6e88203eed360761cbf2a2cb3a8d702aa87f3f6d"
+  integrity sha512-EkYnpG8qHgYBFAwsgsGEqvT1WUidX0tt/ijepx7z8EUJHElykg91RvW1XbkT59T0gZzzszOpjQv7SE41XuIXyQ==
 
 has-flag@^4.0.0:
   version "4.0.0"

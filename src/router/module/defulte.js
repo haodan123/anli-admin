@@ -11,7 +11,7 @@ export default [
       {
         name: 'redirect',
         path: '/redirect/:path(.*)',
-        meta: { hidden: true },
+        meta: { hidden: true, title: 'z' },
         component: () => import(/* webpackChunkName: "redirect" */ '@/views/redirect/index.vue')
       }
     ]
@@ -22,6 +22,7 @@ export default [
     component: layout,
     redirect: "/dashboard",
     icon: 'fa-solid fa-house',
+    meta: { title: "首页" },
     children: [
       {
         icon: 'fa-solid fa-house',
@@ -31,6 +32,41 @@ export default [
         meta: { title: "首页" },
       },
     ],
+  },
+  {
+    path: "/card",
+    name: "card",
+    component: layout,
+    redirect: "/dashboard",
+    icon: 'fa-solid fa-card',
+    meta: { title: "卡片" },
+    children: [
+      {
+        icon: 'fa-solid fa-card',
+        path: "/clansCards",
+        component: () => import("@/views/cards/clansCards/index.vue"),
+        name: "clansCards",
+        meta: { title: "clans卡片" },
+      },
+    ],
+  },
+  {
+    path: '/cssTest',
+    name: 'cssTest',
+    component: layout,
+    redirect: '/cssTest',
+    icon: 'fa-solid fa-vial-virus',
+    meta: { title: 'css样式' },
+    children: [
+      {
+        path: '/example',
+        name: 'example',
+        icon: 'fa-solid fa-vial-virus',
+
+        meta: { title: '查看更多案例', keepAlive: true },
+        component: () => import('@/views/cssTest/example/index.vue')
+      }
+    ]
   },
   {
     path: '/test',
@@ -70,21 +106,27 @@ export default [
         component: () => import('@/views/tabbar2/index.vue')
       },
       {
+        path: '/animatedTabBar',
+        name: 'animatedTabBar',
+        icon: 'fa-solid fa-table-cells-large',
+        meta: { title: '动画tabbar', keepAlive: true },
+        component: () => import('@/views/animatedTabBar/index.vue')
+      },
+
+      {
         path: '/buttonList',
         name: 'buttonList',
         icon: 'fa-solid fa-square-check',
         meta: { title: '按钮列表', keepAlive: true },
         component: () => import('@/views/buttonList/index.vue')
       },
-      {
-        path: '/clansCards',
-        name: 'clansCards',
-        icon: 'fa-regular fa-credit-card',
-        meta: { title: 'clans卡片', keepAlive: true },
-        component: () => import('@/views/clansCards/index.vue')
-      },
-
-
+      // {
+      //   path: '/clansCards',
+      //   name: 'clansCards',
+      //   icon: 'fa-regular fa-credit-card',
+      //   meta: { title: 'clans卡片', keepAlive: true },
+      //   component: () => import('@/views/clansCards/index.vue')
+      // },
       {
         path: '/test-2',
         name: '测试2',
@@ -98,58 +140,59 @@ export default [
   {
     path: "/learnjs",
     component: layout,
-    name: '学习js',
+    name: 'learnjs',
     style: "color: #cdea39;",
     redirect: "/textEditor",
     icon: 'fa-brands fa-js',
+    meta: { title: '学习js' },
     children: [
       {
         path: "/textEditor",
-        icon:'fa-solid fa-text',
+        icon: 'fa-solid fa-text',
         component: () => import("@/views/Learnjs/textEditor/index.vue"),
         name: "textEditor",
         meta: { title: "富文本" },
       },
       {
         path: "/textEditor2",
-        icon:'fa-solid fa-key',
+        icon: 'fa-solid fa-key',
         component: () => import("@/views/Learnjs/textEditor2/index.vue"),
         name: "textEditor2",
         meta: { title: "富文本2" },
       },
       {
         path: "/password",
-        icon:'fa-solid fa-key',
+        icon: 'fa-solid fa-key',
         component: () => import("@/views/Learnjs/password/index.vue"),
-        name: "密码随机生成",
+        name: "password",
         meta: { title: "密码随机生成" },
       },
       {
         path: "/qrCodeGenerator",
-        icon:'fa-solid fa-qrcode',
+        icon: 'fa-solid fa-qrcode',
         component: () => import("@/views/Learnjs/qrCodeGenerator/index.vue"),
-        name: "生成二维码",
+        name: "qrCodeGenerator",
         meta: { title: "生成二维码" },
       },
       {
         path: "/deviceBattery",
-        icon:'fa-solid fa-battery-half',
+        icon: 'fa-solid fa-battery-half',
         component: () => import("@/views/Learnjs/deviceBattery/index.vue"),
-        name: "设备电池",
+        name: "deviceBattery",
         meta: { title: "设备电池" },
       },
       {
         path: "/XOgame",
-        icon:'fa-solid fa-o',
+        icon: 'fa-solid fa-o',
         component: () => import("@/views/Learnjs/XOgame/index.vue"),
-        name: "井字棋",
+        name: "XOgame",
         meta: { title: "井字棋" },
       },
       {
         path: "/XOgame2",
-        icon:'fa-solid fa-o',
+        icon: 'fa-solid fa-o',
         component: () => import("@/views/Learnjs/XOgame/index2.vue"),
-        name: "井字棋2",
+        name: "XOgame2",
         meta: { title: "井字棋2" },
       },
       {

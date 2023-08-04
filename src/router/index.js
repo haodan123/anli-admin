@@ -10,7 +10,14 @@ const router = createRouter({
     name: 'huadong',
     meta: { title: '滑动', keepAlive: true },
     component: () => import(/* webpackChunkName: "redirect" */ '@/views/huadong/index.vue')
-  }, ...routes]
+  },
+  {
+    path: '/gsap',
+    name: 'ceshi',
+    meta: { title: '滑动', keepAlive: true },
+    component: () => import(/* webpackChunkName: "redirect" */ '@/viewsGsap/AnimatedSectionsGSAP/index.vue')
+  }
+  , ...routes]
 })
 
 export default router

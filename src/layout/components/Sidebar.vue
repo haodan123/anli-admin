@@ -19,17 +19,19 @@
         <el-sub-menu :index="item.path" v-if="item.children.length > 1">
           <template #title>
             <font-awesome-icon :icon="item.icon" />
-            <span>{{ item.name }}</span>
+            <span>{{ item.meta.title }}</span>
           </template>
           <el-menu-item :index="v.path" v-for="v in item.children" :key="v.id">
             <font-awesome-icon :icon="v.icon" />
-            <span>{{ v.name }}</span>
+            <!-- {{ v.meta.title }} -->
+            <span>{{ v.meta.title }}</span>
           </el-menu-item>
         </el-sub-menu>
 
         <el-menu-item v-else :index="item.children[0].path">
           <font-awesome-icon :icon="item.icon" />
-          <span>{{ item.name }}</span>
+          <!-- <span>{{ item.name }}</span> -->
+          <span>{{ item.meta.title }}</span>
         </el-menu-item>
       </template>
     </el-menu>

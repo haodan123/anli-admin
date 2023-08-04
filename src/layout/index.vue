@@ -198,6 +198,7 @@
     overflow: hidden;
     // overflow-y: auto;
     min-height: calc(100vh - 100px);
+    height: calc(100vh - 100px);
   }
 
   //切换路由的动画

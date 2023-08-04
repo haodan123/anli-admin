@@ -13,9 +13,9 @@ import router from './router'
 const app = createApp(App)
 
 // 富文本ckeditor5 start
-import CKEditor from '@ckeditor/ckeditor5-vue';
+// import CKEditor from '@ckeditor/ckeditor5-vue';
 
-app.use(CKEditor)
+// app.use(CKEditor)
 // 富文本ckeditor5 end
 
 // fontawesome图标start
